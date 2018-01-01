@@ -100,6 +100,6 @@ public class love extends AppCompatActivity implements View.OnClickListener {
         int rando = (int)(Math.random()*31);
         quote.setText(lqoutes[rando]);
         authorTxt.setText("-"+author[rando]);
-        shareBody = lqoutes[rando] + "-" + author[rando] +" ,An app by RRP";
+        shareBody = lqoutes[rando] + "-" + author[rando] +", An app by RRP";
     }
 }
