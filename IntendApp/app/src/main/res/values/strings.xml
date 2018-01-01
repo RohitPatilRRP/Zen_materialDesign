@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">IntendApp</string>
+    <string name="action_settings">Settings</string>
+    <string name="firstBtn">Click Me</string>
+    <string name="firstText">First Activity</string>
+    <string name="title_activity_two">ActivityTwo</string>
+    <string name="second_activity">Second Activity</string>
+</resources>

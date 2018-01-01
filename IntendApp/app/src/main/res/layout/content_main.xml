@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/holo_red_light"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.app.intendapp.MainActivity"
+    tools:showIn="@layout/activity_main"
+    tools:ignore="ExtraText">
+
+    <TextView
+        android:id="@+id/firstText"
+        android:layout_width="320dp"
+        android:layout_height="75dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="123dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="123dp"
+        android:text="@string/firstText"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="@android:color/white"
+        android:textSize="30sp"
+        tools:ignore="RtlHardcoded" />
+
+    <Button
+        android:id="@+id/buttonOne"
+        android:layout_width="200dp"
+        android:layout_height="65dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="167dp"
+        android:text="@string/firstBtn"
+        android:textSize="20sp"
+        android:textStyle="bold|italic"
+        tools:ignore="UnusedAttribute"
+        android:onClick="onClickOne"/>
+
+    <EditText
+        android:id="@+id/firstIp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/buttonOne"
+        android:layout_alignEnd="@+id/buttonOne"
+        android:layout_alignRight="@+id/buttonOne"
+        android:layout_marginBottom="33dp"
+        android:ems="10"
+        android:inputType="" />
+      <!--  android:inputType="textPersonName"
+        android:text="Name"--> />
+
+</RelativeLayout>
