@@ -14,22 +14,29 @@
 
     <ImageView
         android:id="@+id/logo"
-        android:layout_width="250dp"
-        android:layout_height="250dp"
+        android:layout_width="205dp"
+        android:layout_height="184dp"
         android:layout_marginBottom="25dp"
-        android:layout_marginTop="-100dp"
+        android:layout_marginTop="-150dp"
+        android:gravity="center"
         app:srcCompat="@drawable/left_quote"/>
 
     <TextView
         android:id="@+id/intro"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="25dp"
-        android:layout_marginTop="25dp"
-        android:shadowColor="#000000"
-        android:shadowRadius="5"
+        android:gravity="center"
         android:text="Welcome to Zen"
         android:textColor="@color/light_font"
-        android:textSize="45sp"
+        android:textSize="30sp"
         android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/abt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Created By RRP"
+        android:textColor="@color/light_font"/>
+
 </LinearLayout>

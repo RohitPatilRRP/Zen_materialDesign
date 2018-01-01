@@ -5,32 +5,51 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Window;
 import android.view.WindowManager;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 public class splash extends AppCompatActivity {
+
+    ImageView logoIcon;
+    TextView text,abt;
+    Animation fromBottom,fromTop,fade;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_splash);
-        getSupportActionBar().hide();
-        logo lg =new logo();
-        lg.start();
+
+        logoIcon = (ImageView)findViewById(R.id.logo);
+        text =(TextView)findViewById(R.id.intro);
+        abt=(TextView) findViewById(R.id.abt);
+
+        fromBottom = AnimationUtils.loadAnimation(this,R.anim.frombottom);
+        fromTop = AnimationUtils.loadAnimation(this,R.anim.fromtop);
+        fade = AnimationUtils.loadAnimation(this,R.anim.fade);
+
+
+        logoIcon.setAnimation(fromTop);
+        text.setAnimation(fromBottom);
+        abt.setAnimation(fade);
+        final Intent intent = new Intent(this,MainActivity.class);
+        Thread timer = new Thread(){
+            public void run(){
+                try{
+                    sleep(5000);
+                }
+                catch (InterruptedException e){
+                    e.printStackTrace();
+                }
+                finally {
+                    startActivity(intent);
+                    finish();
+                }
+            }
+        };
+        timer.start();
     }
 
-    private class logo extends Thread{
-        public void run(){
-            try{
-                sleep(1000);
-            }
-            catch (InterruptedException e){
-                e.printStackTrace();
-            }
-            Intent intent= new Intent(splash.this,MainActivity.class);
-            startActivity(intent);
-            splash.this.finish();
-        }
-    }
+
 }
