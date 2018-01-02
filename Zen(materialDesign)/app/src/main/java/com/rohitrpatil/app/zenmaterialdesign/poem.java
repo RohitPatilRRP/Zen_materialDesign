@@ -12,7 +12,9 @@ import com.hololo.tutorial.library.TutorialActivity;
 
 public class poem extends AppCompatActivity implements View.OnClickListener {
 
-    TextView poemTxt;CardView nxtbtn;
+    TextView poemTxt;
+    TextView titleTxt;
+    CardView nxtbtn;
 
     final String[] poems = {
             "There was a girl who was afraid of love, \n" +
@@ -172,6 +174,14 @@ public class poem extends AppCompatActivity implements View.OnClickListener {
 
     };
 
+
+    final String[] title = {
+      "Poem based on a love story",
+            "Love Birds",
+            "When the sun shines bright ",
+            "The inner voice",
+            "On School",
+    };
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -179,6 +189,7 @@ public class poem extends AppCompatActivity implements View.OnClickListener {
 
         nxtbtn=(CardView)findViewById(R.id.nxtbtn);
         poemTxt = (TextView)findViewById(R.id.poemTxt);
+        titleTxt = (TextView)findViewById(R.id.txt);
         nxtbtn.setOnClickListener(this);
     }
 
@@ -186,5 +197,6 @@ public class poem extends AppCompatActivity implements View.OnClickListener {
     public void onClick(View view) {
         int rando = (int)(Math.random()*5);
         poemTxt.setText(poems[rando]);
+        titleTxt.setText(title[rando]);
     }
 }
