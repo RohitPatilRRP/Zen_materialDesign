@@ -44,7 +44,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="277dp"
                 android:padding="20dp"
-                android:text="Zen Quotes App is an inspiring App that shows you Motivational Quotes. You can Share any of the thousands of inspirational Quotes available. Plus, you select from any of the five categories available to select a quote at any time of the day to help you achieve Mindfulness."
+                android:text="Zen Quotes App is an inspiring App that shows you Motivational Quotes. You can Share any of the thousands of inspirational Quotes available. Plus, you can select from any of the five categories available to select a quote at any time of the day to help you achieve Mindfulness."
                 android:textSize="18sp"
                 android:textStyle="italic"/>
 

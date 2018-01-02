@@ -51,11 +51,11 @@
         <TextView
             android:id="@+id/quote"
             android:layout_width="320dp"
-            android:layout_height="149dp"
+            android:layout_height="200dp"
             android:layout_weight="1"
             android:text="Your Quote goes here.."
             android:textSize="24sp"
-            android:textStyle="bold|italic"/>
+            android:textStyle="italic"/>
 
         <TextView
             android:id="@+id/author"
@@ -64,8 +64,8 @@
             android:layout_weight="1"
             android:gravity="center"
             android:text="author"
-            android:textSize="15sp"
-            android:textStyle="italic"/>
+            android:textSize="24sp"
+            android:textStyle="bold|italic"/>
 
     </LinearLayout>
 
@@ -92,10 +92,11 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.663">
+                app:layout_constraintVertical_bias="0.663"
+                android:layout_marginRight="36dp">
 
                 <TextView
-                    android:id="@+id/nxtbtn"
+                    android:id="@+id/nxtbtntxt"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
